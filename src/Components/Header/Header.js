@@ -3,18 +3,17 @@ import'./header.css'
 function Header() {
     return (
         <div>
-            <div className='outer-container'>
-                <ul className='list-container'>
-                    <li>Netflix
-                    </li>
-                    <li>home</li>
-                    <li>contact</li>
-                    <li>About</li>
-                </ul>
-                
+            <div className="outer-container">
+            <ul className="list-container">
+                <li>Netflix</li>
+                <li>home</li>
+                <li>contact</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
             </div>
-    </div>
-    )
+        </div>
+    );
 }
 
 export default Header
