@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.outer-container{
+    position :sticky;
+    background-color : red;
+    
+}
+.list-container{display: flex;
+justify-content: space-between;}
