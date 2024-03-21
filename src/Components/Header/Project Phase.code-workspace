@@ -1,6 +1,7 @@
 {
 	"folders": [
 		{
+			"path": "../../../../.."
 		},
 		{
 			"path": "../../../../../../Python/MyPython"
