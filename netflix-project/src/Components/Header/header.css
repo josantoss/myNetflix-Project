@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
 }
-.outer-container{
+.Header-left-container{
     position :sticky;
     background-color : red;
     width: 100%;
