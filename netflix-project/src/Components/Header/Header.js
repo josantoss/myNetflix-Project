@@ -7,35 +7,29 @@ import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 function Header() {
     return (
-      <div>
-        <div className="Header-outer-container">
-          <div className="Header-container">
-            <div className="Header-left-container">
-              <ul className="list-container">
-                <li>
-                  <img src={Netflexlogo} alt="Netflex Logo" width="100" />
-                </li>
-                <li>home</li>
-                <li>contact</li>
-                <li>About</li>
-                <li>Contact</li>
-                </ul>
+        <div>
+            <div className="Header-outer-container">
+            <div className="Header-container">
+                <div className="Header-left-container">
+                    <ul className="list-container">
+                        <li>
+                        <img src={Netflexlogo} alt="Netflex Logo" width="100" />
+                        </li>
+                        <li>Home</li>
+                        <li>Tv Shows</li>
+                        <li>Moves</li>
+                        <li>Latest</li>
+                        <li>My List</li>
+                        <li>Browse by languages</li>
+                    </ul>
                 </div>
                 <div className="Header-right-container">
-                <ul>
-                    <li>
-                    <SearchIcon />
-                    </li>
-                    <li>
-                    <NotificationsNoneIcon />
-                    </li>
-                    <li>
-                    <AccountBoxIcon />
-                    </li>
-                    <li>
-                    <ArrowDropDownIcon />
-                    </li>
-                </ul>
+                    <ul className='right-list'>
+                        <li><SearchIcon /></li>
+                        <li><NotificationsNoneIcon /></li>
+                        <li><AccountBoxIcon /></li>
+                        <li><ArrowDropDownIcon /></li>
+                    </ul>
                 </div>
             </div>
             </div>
