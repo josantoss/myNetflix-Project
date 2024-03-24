@@ -11,9 +11,9 @@ function Header() {
             <div className="Header-outer-container">
             <div className="Header-container">
                 <div className="Header-left-container">
-                    <ul className="list-container">
+                    <ul className="left-container">
                         <li>
-                        <img src={Netflexlogo} alt="Netflex Logo" width="100" />
+                        <img src={Netflexlogo} alt="Netflex Logo" width="95" />
                         </li>
                         <li>Home</li>
                         <li>Tv Shows</li>
