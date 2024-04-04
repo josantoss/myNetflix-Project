@@ -1,5 +1,5 @@
 import React from "react";
-import Row from './Row/Row';
+import Row from '../Row/Row';
 import requests from '../../../utils/requests';
 
 const RowList = () => {
@@ -19,7 +19,8 @@ const RowList = () => {
             <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
             <Row title="TV Shows" fetchUrl={requests.fetchTvShow} />
             <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
-        </>)
+        </>
+    )
 }
 
 export default RowList;
