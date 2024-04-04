@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-    baseURL: "http://image.tmdb.org/t/p/",
+    baseURL: "https://api.themoviedb.org/3",
 });
 
 export default instance;
