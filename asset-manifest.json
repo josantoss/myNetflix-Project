@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/JOSSANTOS-12.github.io/myNetflix-Project/static/css/main.c8de87ff.css",
+    "main.js": "/JOSSANTOS-12.github.io/myNetflix-Project/static/js/main.e6a2c7d3.js",
+    "static/media/netflix_PNG15.png": "/JOSSANTOS-12.github.io/myNetflix-Project/static/media/netflix_PNG15.9f5c301b95282293ee47.png",
+    "index.html": "/JOSSANTOS-12.github.io/myNetflix-Project/index.html",
+    "main.c8de87ff.css.map": "/JOSSANTOS-12.github.io/myNetflix-Project/static/css/main.c8de87ff.css.map",
+    "main.e6a2c7d3.js.map": "/JOSSANTOS-12.github.io/myNetflix-Project/static/js/main.e6a2c7d3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c8de87ff.css",
+    "static/js/main.e6a2c7d3.js"
+  ]
+}
