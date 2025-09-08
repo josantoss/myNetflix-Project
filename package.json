@@ -13,7 +13,6 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.8",
     "firebase": "^10.10.0",
-    "gh-pages": "^6.1.1",
     "movie-trailer": "^3.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -22,9 +21,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "dev": "vite",
     "start": "react-scripts start",
-    "predploy": "npm run build",
-    "deploy": "gh-page-d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -48,6 +48,6 @@
     ]
   },
   "devDependencies": {
-    "github-pages": "^3.0.2"
+    "gh-pages": "^6.1.1"
   }
 }
