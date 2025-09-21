@@ -1,1 +1,1 @@
-export { default } from './RowList';
+export { default } from './RowList.js';
