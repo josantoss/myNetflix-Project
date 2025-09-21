@@ -1,12 +1,16 @@
-// TMDB API Key - Working key for deployment
-// For production, get your own at https://www.themoviedb.org/settings/api
-const API_KEY = process.env.REACT_APP_API_KEY || "3fd2be6f0c70a2a598f084ddfb75487c";
+// TMDB API Key - MUST be set as environment variable
+// Get your API key from: https://www.themoviedb.org/settings/api
+const API_KEY = process.env.REACT_APP_API_KEY;
 
-// Log API key status
-if (!process.env.REACT_APP_API_KEY) {
-    console.log("🎬 Using fallback TMDB API key for deployment");
+// Validate API key exists
+if (!API_KEY) {
+    console.error("❌ REACT_APP_API_KEY environment variable is required!");
+    console.error("📋 Steps to fix:");
+    console.error("1. Get API key from https://www.themoviedb.org/settings/api");
+    console.error("2. Add REACT_APP_API_KEY to your Vercel environment variables");
+    console.error("3. Redeploy your application");
 } else {
-    console.log("🔑 Using custom TMDB API key");
+    console.log("✅ TMDB API key loaded from environment variables");
 }
 
 const requests = {
