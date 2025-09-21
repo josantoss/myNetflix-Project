@@ -1,9 +1,12 @@
-// TMDB API Key - Get yours from https://www.themoviedb.org/settings/api
-const API_KEY = process.env.REACT_APP_API_KEY || "8b2a4b8d3c1e4f5a6b7c8d9e0f1a2b3c";
+// TMDB API Key - Working key for deployment
+// For production, get your own at https://www.themoviedb.org/settings/api
+const API_KEY = process.env.REACT_APP_API_KEY || "3fd2be6f0c70a2a598f084ddfb75487c";
 
-// Log warning if no API key is found
+// Log API key status
 if (!process.env.REACT_APP_API_KEY) {
-    console.warn("⚠️ TMDB API key not found. Using demo key. Get your own at https://www.themoviedb.org/settings/api");
+    console.log("🎬 Using fallback TMDB API key for deployment");
+} else {
+    console.log("🔑 Using custom TMDB API key");
 }
 
 const requests = {
