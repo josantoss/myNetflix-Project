@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Row.css";
-import axios from "../../../Utils/axios";
+import axios from "../../Utils/axios";
 // Removed external trailer package - using direct YouTube approach
 import YouTube from "react-youtube";
 
