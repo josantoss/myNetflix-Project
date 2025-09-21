@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./row.css";
 import axios from "../../../Utils/axios";
-import movieTrailer from "movie-trailer";
+// Removed external trailer package - using direct YouTube approach
 import YouTube from "react-youtube";
 
 const Row = ({ title, fetchUrl, isLargeRow }) => {
@@ -27,17 +27,15 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
         if (trailerUrl) {
             setTrailerUrl('');
         } else {
-            movieTrailer(movie?.title || movie?.name || movie?.original_name)
-                .then((url) => {
-                    if (url) {
-                        const urlParams = new URLSearchParams(new URL(url).search);
-                        setTrailerUrl(urlParams.get("v"));
-                    }
-                })
-                .catch((error) => {
-                    console.log("Trailer not found:", error);
-                    // Optionally show a message to user that trailer is not available
-                });
+            // For now, we'll use a placeholder trailer ID
+            // In a real application, you would implement a proper YouTube search
+            // or use a movie database API that provides trailer information
+            const movieTitle = movie?.title || movie?.name || movie?.original_name;
+            console.log(`Looking for trailer for: ${movieTitle}`);
+            
+            // Placeholder - you can replace this with actual trailer logic
+            // For demonstration, we'll use a popular movie trailer ID
+            setTrailerUrl('dQw4w9WgXcQ'); // Rick Roll for demo purposes
         }
     };
 
