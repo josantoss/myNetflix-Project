@@ -23,5 +23,10 @@
   ],
   "env": {
     "REACT_APP_API_KEY": "@react_app_api_key"
+  },
+  "build": {
+    "env": {
+      "REACT_APP_API_KEY": "8b2a4b8d3c1e4f5a6b7c8d9e0f1a2b3c"
+    }
   }
 }
