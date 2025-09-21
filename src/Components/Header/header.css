@@ -1,44 +1,199 @@
-.header_outer_container{
-    position:sticky;
+.header_outer_container {
+    position: fixed;
     top: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: rgb(148, 132, 132); */
-    background-color:  rgb(20, 20, 20);
-    /* background-color: transparent; */
-    height: 10vh;
+    background-color: transparent;
+    height: 70px;
     color: white;
-    transition:all 0.5s;
-    transition-timing-function: ease-in;
-    z-index: 1;
-    /* background-color: red; */
+    transition: all 0.5s ease-in;
+    z-index: 1000;
+    padding: 0 20px;
 }
-.nav__black{
-    background-color:  rgb(20, 20, 20);
+
+.nav__black {
+    background-color: rgba(20, 20, 20, 0.95);
+    backdrop-filter: blur(10px);
 }
-.header_container{
-    width: 90%;
+
+.header_container {
+    width: 100%;
+    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color: yellow; */
 }
-.header_left ul{
-    width: 140%;
+
+.header_left {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    list-style: none;
-    cursor: pointer;
-    /* background-color: lightblue; */
+    flex: 1;
 }
-.header_right ul{
-    width: 150%;
+
+.logo_container {
+    margin-right: 40px;
+}
+
+.logo_container img {
+    transition: transform 0.3s ease;
+}
+
+.logo_container img:hover {
+    transform: scale(1.05);
+}
+
+.nav_menu {
     display: flex;
-    justify-content: space-around;
     list-style: none;
-    cursor: pointer;
-    /* background-color: lightgreen; */
+    margin: 0;
+    padding: 0;
+    gap: 20px;
 }
-.header_left ul li:hover{text-decoration: underline;}
+
+.nav_menu li {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav_menu li:hover {
+    color: #e50914;
+}
+
+.nav_menu li::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #e50914;
+    transition: width 0.3s ease;
+}
+
+.nav_menu li:hover::after {
+    width: 100%;
+}
+
+.header_right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header_right ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+    align-items: center;
+}
+
+.header_right ul li {
+    cursor: pointer;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.header_right ul li:hover {
+    color: #e50914;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.mobile_menu_toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.mobile_menu_toggle:hover {
+    color: #e50914;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .header_outer_container {
+        padding: 0 15px;
+        height: 60px;
+    }
+    
+    .nav_menu {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background-color: rgba(20, 20, 20, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 50px;
+        gap: 30px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+    
+    .nav_menu_active {
+        transform: translateX(0);
+    }
+    
+    .nav_menu li {
+        font-size: 18px;
+        padding: 10px 0;
+    }
+    
+    .mobile_menu_toggle {
+        display: block;
+    }
+    
+    .header_right ul {
+        gap: 15px;
+    }
+    
+    .header_right ul li {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header_outer_container {
+        padding: 0 10px;
+        height: 55px;
+    }
+    
+    .logo_container {
+        margin-right: 20px;
+    }
+    
+    .logo_container img {
+        width: 40px;
+    }
+    
+    .header_right ul {
+        gap: 10px;
+    }
+    
+    .header_right ul li {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .mobile_menu_toggle {
+        font-size: 20px;
+    }
+}
