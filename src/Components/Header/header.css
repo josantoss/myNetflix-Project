@@ -1,47 +1,38 @@
 .header_outer_container {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
     height: 70px;
-    color: white;
-    transition: all 0.5s ease-in;
-    z-index: 1000;
-    padding: 0 20px;
+    z-index: 999;
+    transition: all 0.5s ease-in-out;
+    background: transparent;
 }
 
-.nav__black {
-    background-color: rgba(20, 20, 20, 0.95);
-    backdrop-filter: blur(10px);
+.header_outer_container.nav__black {
+    background-color: #111;
 }
 
 .header_container {
-    width: 100%;
-    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 70px;
+    padding: 0 4%;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 .header_left {
     display: flex;
     align-items: center;
-    flex: 1;
-}
-
-.logo_container {
-    margin-right: 40px;
+    gap: 40px;
 }
 
 .logo_container img {
-    transition: transform 0.3s ease;
-}
-
-.logo_container img:hover {
-    transform: scale(1.05);
+    height: 25px;
+    width: auto;
+    object-fit: contain;
 }
 
 .nav_menu {
@@ -53,30 +44,15 @@
 }
 
 .nav_menu li {
+    color: #fff;
     cursor: pointer;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
     transition: color 0.3s ease;
-    position: relative;
 }
 
 .nav_menu li:hover {
     color: #e50914;
-}
-
-.nav_menu li::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #e50914;
-    transition: width 0.3s ease;
-}
-
-.nav_menu li:hover::after {
-    width: 100%;
 }
 
 .header_right {
@@ -95,59 +71,54 @@
 }
 
 .header_right ul li {
+    color: #fff;
     cursor: pointer;
     transition: color 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    transition: background-color 0.3s ease;
 }
 
 .header_right ul li:hover {
     color: #e50914;
-    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.search_icon,
+.notification_icon,
+.account_icon,
+.dropdown_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .mobile_menu_toggle {
     display: none;
+    color: #fff;
     cursor: pointer;
     font-size: 24px;
-    color: white;
-    transition: color 0.3s ease;
-}
-
-.mobile_menu_toggle:hover {
-    color: #e50914;
 }
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-    .header_outer_container {
-        padding: 0 15px;
-        height: 60px;
+    .header_container {
+        padding: 0 20px;
     }
     
     .nav_menu {
         position: fixed;
-        top: 60px;
+        top: 70px;
         left: 0;
         width: 100%;
-        height: calc(100vh - 60px);
-        background-color: rgba(20, 20, 20, 0.98);
-        backdrop-filter: blur(10px);
+        height: calc(100vh - 70px);
+        background-color: rgba(0, 0, 0, 0.95);
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
         padding-top: 50px;
-        gap: 30px;
         transform: translateX(-100%);
-        transition: transform 0.3s ease;
+        transition: transform 0.3s ease-in-out;
+        gap: 30px;
     }
     
-    .nav_menu_active {
+    .nav_menu.nav_menu_active {
         transform: translateX(0);
     }
     
@@ -160,40 +131,25 @@
         display: block;
     }
     
-    .header_right ul {
-        gap: 15px;
+    .header_left {
+        gap: 20px;
     }
     
-    .header_right ul li {
-        width: 28px;
-        height: 28px;
+    .header_right ul {
+        gap: 15px;
     }
 }
 
 @media (max-width: 480px) {
-    .header_outer_container {
-        padding: 0 10px;
-        height: 55px;
-    }
-    
-    .logo_container {
-        margin-right: 20px;
+    .header_container {
+        padding: 0 15px;
     }
     
     .logo_container img {
-        width: 40px;
+        height: 20px;
     }
     
     .header_right ul {
         gap: 10px;
-    }
-    
-    .header_right ul li {
-        width: 24px;
-        height: 24px;
-    }
-    
-    .mobile_menu_toggle {
-        font-size: 20px;
     }
 }
